@@ -1,0 +1,1 @@
+This repo is for roboshop project exceution using ansible
