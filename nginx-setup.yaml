@@ -5,7 +5,7 @@
   - name: disable nginx
     ansible.builtin.command: dnf module disable nginx -y
       
-  - name: enable nodejs
+  - name: enable nginx
     ansible.builtin.command: dnf module enable nginx:1.24 -y
   
   - name: install nginx
@@ -21,7 +21,7 @@
 
   - name: Delete old code
     ansible.builtin.file:
-      path: /usr/share/nginx/html/* 
+      path: /usr/share/nginx/html
       state: absent
 
   
