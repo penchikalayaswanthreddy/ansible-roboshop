@@ -9,3 +9,7 @@ hostnames:
 keyed_groups:
   - key: tags.Role
     prefix: "prod"
+
+
+compose:
+  ansible_user: "'ec2-user'"

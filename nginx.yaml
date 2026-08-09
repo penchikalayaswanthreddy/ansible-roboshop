@@ -1,0 +1,17 @@
+---
+- name: Install nginx on frontend servers
+  hosts: prod_frontend
+  become: true
+
+  tasks:
+
+    - name: Install nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+
+    - name: Start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
